@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import GroupSelector from './GroupSelector';
+import Schedule from './Schedule';
 
 class App extends Component {
   constructor() {
@@ -24,6 +25,8 @@ class App extends Component {
   }
 
   render() {
+    let classesList = this.generateClassesList();
+
     return (
       <div className="App">
         <header className="App-header">
@@ -31,6 +34,8 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="main">
+          <Schedule classes={classesList}></Schedule>
+
           <GroupSelector courses={this.state.courses} selection={this.state.selection} onUpdate={this.handleChangeSelection.bind(this)} />
         </div>
       </div>
@@ -43,6 +48,23 @@ class App extends Component {
     this.setState({selection});
 
     console.log('new selection: ', selection);
+  }
+
+  generateClassesList() {
+    let restructure = (obj, course, type) => ({
+      course: course,
+      type: type,
+      day: obj.day,
+      time: obj.time.split(' - ')
+    });
+
+    let arrays = Object.entries(this.state.selection).map(([course, [theoryGroup, labGroup]]) => {
+      let groups = this.state.courses[course];
+      let theoryClasses = groups[0][theoryGroup].map(obj => restructure(obj, course, 0));
+      let labClasses = groups[1][labGroup].map(obj => restructure(obj, course, 1));
+      return theoryClasses.concat(labClasses);
+    });
+    return Array.prototype.concat.apply([], arrays);
   }
 }
 
