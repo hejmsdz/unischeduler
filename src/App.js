@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import GroupSelector from './GroupSelector';
 import Schedule from './Schedule';
+import SvgSchedule from './SvgSchedule';
 
 class App extends Component {
   constructor() {
@@ -34,6 +35,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="main">
+          <SvgSchedule classes={classesList}></SvgSchedule>
           <Schedule classes={classesList}></Schedule>
 
           <GroupSelector courses={this.state.courses} selection={this.state.selection} onUpdate={this.handleChangeSelection.bind(this)} />
@@ -51,12 +53,22 @@ class App extends Component {
   }
 
   generateClassesList() {
-    let restructure = (obj, course, type) => ({
-      course: course,
-      type: type,
-      day: obj.day,
-      time: obj.time.split(' - ')
-    });
+    let timeToFloat = (timeStr) => {
+      let [hour, min] = timeStr.split(':').map(Number);
+      return hour + min / 60;
+    }
+
+    let restructure = (obj, course, type) => {
+      let [startTime, endTime] = obj.time.split(' - ').map(timeToFloat);
+
+      return {
+        course: course,
+        type: type,
+        day: obj.day,
+        time: startTime,
+        duration: endTime - startTime
+      }
+    };
 
     let arrays = Object.entries(this.state.selection).map(([course, [theoryGroup, labGroup]]) => {
       let groups = this.state.courses[course];

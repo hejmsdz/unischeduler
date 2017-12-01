@@ -5,7 +5,7 @@ class Schedule extends Component {
     return (
       <ul>
         {this.props.classes.map((cl, i) => (
-        <li key={i}>{cl.course}/{cl.type}, {cl.day} {cl.time[0]}-{cl.time[1]}</li>
+        <li key={i}>{cl.course}/{cl.type}, {cl.day} {cl.time}+{cl.duration}</li>
         ))}
       </ul>
     );
