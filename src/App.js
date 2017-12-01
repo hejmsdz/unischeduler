@@ -36,7 +36,7 @@ class App extends Component {
         </header>
         <div className="main">
           <SvgSchedule classes={classesList}></SvgSchedule>
-          <Schedule classes={classesList}></Schedule>
+          {/*<Schedule classes={classesList}></Schedule>*/}
 
           <GroupSelector courses={this.state.courses} selection={this.state.selection} onUpdate={this.handleChangeSelection.bind(this)} />
         </div>
