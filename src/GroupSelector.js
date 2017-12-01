@@ -2,19 +2,6 @@ import React, { Component } from 'react';
 import SelectBox from './SelectBox';
 
 class GroupSelector extends Component {
-  constructor() {
-    super();
-    this.state = {courses: {}};
-  }
-
-  componentWillMount() {
-    fetch('/data/groups.json')
-      .then(resp => resp.json())
-      .then(data => {
-        this.setState({courses: data});
-      });
-  }
-
   render() {
     return (
       <table>
@@ -26,11 +13,11 @@ class GroupSelector extends Component {
           </tr>
         </thead>
         <tbody>
-          {Object.entries(this.state.courses).map(([name, [theoryGroups, labGroups]]) => (
+          {Object.entries(this.props.courses).map(([name, [theoryGroups, labGroups]]) => (
           <tr key={name}>
             <td>{name}</td>
-            <td><SelectBox options={Object.keys(theoryGroups)} /></td>
-            <td><SelectBox options={Object.keys(labGroups)} /></td>
+            <td><SelectBox options={Object.keys(theoryGroups)} active={this.props.selection[name][0]} onChange={(newValue) => this.props.onUpdate(name, 0, newValue)} /></td>
+            <td><SelectBox options={Object.keys(labGroups)} active={this.props.selection[name][1]} onChange={(newValue) => this.props.onUpdate(name, 1, newValue)} /></td>
           </tr>
           ))}
         </tbody>
