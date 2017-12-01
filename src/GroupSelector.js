@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SelectBox from './SelectBox';
 
 class GroupSelector extends Component {
   constructor() {
@@ -28,8 +29,8 @@ class GroupSelector extends Component {
           {Object.entries(this.state.courses).map(([name, [theoryGroups, labGroups]]) => (
           <tr key={name}>
             <td>{name}</td>
-            <td>{Object.keys(theoryGroups).join('; ')}</td>
-            <td>{Object.keys(labGroups).join('; ')}</td>
+            <td><SelectBox options={Object.keys(theoryGroups)} /></td>
+            <td><SelectBox options={Object.keys(labGroups)} /></td>
           </tr>
           ))}
         </tbody>
