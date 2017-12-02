@@ -30,6 +30,7 @@ class App extends Component {
     let classesList = this.generateClassesList();
     let evaluation = new Evaluation(classesList);
     let overlaps = evaluation.findOverlaps();
+    let score = evaluation.score();
 
     return (
       <div className="App">
@@ -40,6 +41,7 @@ class App extends Component {
         <div className="main">
           <SvgSchedule classes={classesList} overlaps={overlaps}></SvgSchedule>
           {/*<Schedule classes={classesList}></Schedule>*/}
+          <p>Score: {score}</p>
 
           <GroupSelector courses={this.state.courses} selection={this.state.selection} onUpdate={this.handleChangeSelection.bind(this)} />
         </div>
