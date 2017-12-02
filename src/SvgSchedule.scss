@@ -1,0 +1,18 @@
+$colors: (#F44336, #673AB7, #03A9F4, #009688, #FFEB3B, #FF9800, #607D8B);
+
+.hour-line {
+    stroke: #888;
+}
+
+.day-separator, .main-line {
+    stroke: #000;
+}
+
+@for $i from 1 through length($colors) {
+    .course-#{$i} {
+        rect.box {
+            fill: rgba(nth($colors, $i), .8);
+            stroke: #222;
+        }
+    }
+}

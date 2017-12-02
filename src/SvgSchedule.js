@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './SvgSchedule.scss';
 
 class SvgSchedule extends Component {
   render() {
@@ -20,11 +21,19 @@ class SvgSchedule extends Component {
 
     let y = (hour) => marginTop + (hour - startHour) * hourHeight;
 
+    let courseNums = {};
+    let i = 1;
+    this.props.classes.forEach(cl => {
+      if (!courseNums.hasOwnProperty(cl.course)) {
+        courseNums[cl.course] = i++;
+      }
+    });
+
     let hourLines = [];
     for (let h=startHour; h<=endHour; h++) {
       hourLines.push((
         <g>
-          <line x1="0" y1={y(h)} x2={width} y2={y(h)} style={{stroke:'#777', strokeWidth:1}} />
+          <line className="hour-line" x1="0" y1={y(h)} x2={width} y2={y(h)} />
           <text x="0" y={y(h)}>{h}</text>
         </g>
       ))
@@ -35,16 +44,16 @@ class SvgSchedule extends Component {
         {days.map((day, i) => (
         <g>
           <text x={xs[day] + 20} y="35" font-size="24">{day}</text>
-          <line x1={xs[day]} y1="0" x2={xs[day]} y2={width} style={{stroke:'black', strokeWidth:1}} />
+          <line x1={xs[day]} y1="0" x2={xs[day]} y2={width} className="day-separator" />
         </g>
         ))};
         {hourLines}
-        <line x1="0" y1={marginTop} x2={width} y2={marginTop} style={{stroke:'black', strokeWidth:2}} />
-        <line x1={marginLeft} y1="0" x2={marginLeft} y2={width} style={{stroke:'black', strokeWidth:2}} />
+        <line x1="0" y1={marginTop} x2={width} y2={marginTop} className="main-line" />
+        <line x1={marginLeft} y1="0" x2={marginLeft} y2={width} className="main-line" />
 
         {this.props.classes.map(cl => (
-        <g>
-          <rect x={xs[cl.day]} y={y(cl.time)} width={dayWidth} height={hourHeight * cl.duration} style={{fill:'rgba(97, 218, 251, 0.5)', stroke:'black', strokeWidth:1}} />
+        <g className={'course-' + courseNums[cl.course]}>
+          <rect className="box" x={xs[cl.day]} y={y(cl.time)} width={dayWidth} height={hourHeight * cl.duration} />
           <text x={xs[cl.day] + 20} y={y(cl.time) + 20} font-size="20">{cl.course + '/' + cl.type}</text>
         </g>
         ))}
