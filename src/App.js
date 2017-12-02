@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   componentWillMount() {
-    fetch('/data/groups.json')
+    fetch('data/groups.json')
       .then(resp => resp.json())
       .then(data => {
         let selection = {};
