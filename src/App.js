@@ -5,6 +5,8 @@ import GroupSelector from './GroupSelector';
 import Schedule from './Schedule';
 import SvgSchedule from './SvgSchedule';
 import Evaluation from './Evaluation';
+import generateClassesList from './funcs';
+import GeneticAlgorithm from './GeneticAlgorithm';
 
 class App extends Component {
   constructor() {
@@ -23,11 +25,14 @@ class App extends Component {
 
         console.log('initial selection: ', selection);
         this.setState({courses: data, selection: selection});
+
+        this.genetic = new GeneticAlgorithm(data);
+        this.genetic.init();
       });
   }
 
   render() {
-    let classesList = this.generateClassesList();
+    let classesList = generateClassesList(this.state.courses, this.state.selection);
     let evaluation = new Evaluation(classesList);
     let overlaps = evaluation.findOverlaps();
     let score = evaluation.score();
@@ -44,6 +49,8 @@ class App extends Component {
           <p>Score: {score}</p>
 
           <GroupSelector courses={this.state.courses} selection={this.state.selection} onUpdate={this.handleChangeSelection.bind(this)} />
+          <button onClick={this.resetGenetic.bind(this)}>Reset genetic algorithm</button>
+          <button onClick={this.runGenetic.bind(this)}>Run genetic algorithm</button>
         </div>
       </div>
     );
@@ -57,31 +64,13 @@ class App extends Component {
     console.log('new selection: ', selection);
   }
 
-  generateClassesList() {
-    let timeToFloat = (timeStr) => {
-      let [hour, min] = timeStr.split(':').map(Number);
-      return hour + min / 60;
-    }
+  resetGenetic() {
+    this.genetic.init();
+  }
 
-    let restructure = (obj, course, type) => {
-      let [startTime, endTime] = obj.time.split(' - ').map(timeToFloat);
-
-      return {
-        course: course,
-        type: type,
-        day: obj.day,
-        time: startTime,
-        duration: endTime - startTime
-      }
-    };
-
-    let arrays = Object.entries(this.state.selection).map(([course, [theoryGroup, labGroup]]) => {
-      let groups = this.state.courses[course];
-      let theoryClasses = groups[0][theoryGroup].map(obj => restructure(obj, course, 0));
-      let labClasses = groups[1][labGroup].map(obj => restructure(obj, course, 1));
-      return theoryClasses.concat(labClasses);
-    });
-    return Array.prototype.concat.apply([], arrays);
+  runGenetic() {
+    this.genetic.run();
+    this.setState({selection: this.genetic.best});
   }
 }
 
