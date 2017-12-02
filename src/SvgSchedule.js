@@ -41,6 +41,15 @@ class SvgSchedule extends Component {
 
     return (
       <svg width={width} height={height}>
+        <defs>
+          <pattern id="stripe" patternUnits="userSpaceOnUse" width="4" height="4">
+            <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" />
+          </pattern>
+          <mask id="mask">
+            <rect height="100%" width="100%" style={{fill: 'url(#stripe)'}} />
+          </mask>
+        </defs>
+        
         {days.map((day, i) => (
         <g>
           <text x={xs[day] + 20} y="35" font-size="24">{day}</text>
@@ -55,6 +64,12 @@ class SvgSchedule extends Component {
         <g className={'course-' + courseNums[cl.course]}>
           <rect className="box" x={xs[cl.day]} y={y(cl.time)} width={dayWidth} height={hourHeight * cl.duration} />
           <text x={xs[cl.day] + 20} y={y(cl.time) + 20} font-size="20">{cl.course + '/' + cl.type}</text>
+        </g>
+        ))}
+
+        {this.props.overlaps.map(ov => (
+        <g className="overlap">
+          <rect className="box" x={xs[ov.day]} y={y(ov.time)} width={dayWidth} height={hourHeight * ov.duration} />
         </g>
         ))}
       </svg>

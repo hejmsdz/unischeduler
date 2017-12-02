@@ -4,6 +4,7 @@ import './App.scss';
 import GroupSelector from './GroupSelector';
 import Schedule from './Schedule';
 import SvgSchedule from './SvgSchedule';
+import Evaluation from './Evaluation';
 
 class App extends Component {
   constructor() {
@@ -27,6 +28,8 @@ class App extends Component {
 
   render() {
     let classesList = this.generateClassesList();
+    let evaluation = new Evaluation(classesList);
+    let overlaps = evaluation.findOverlaps();
 
     return (
       <div className="App">
@@ -35,7 +38,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="main">
-          <SvgSchedule classes={classesList}></SvgSchedule>
+          <SvgSchedule classes={classesList} overlaps={overlaps}></SvgSchedule>
           {/*<Schedule classes={classesList}></Schedule>*/}
 
           <GroupSelector courses={this.state.courses} selection={this.state.selection} onUpdate={this.handleChangeSelection.bind(this)} />

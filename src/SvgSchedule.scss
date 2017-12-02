@@ -16,3 +16,12 @@ $colors: (#F44336, #673AB7, #03A9F4, #009688, #FFEB3B, #FF9800, #607D8B);
         }
     }
 }
+
+#stripe path {
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.overlap .box {
+    mask: url(#mask);
+}
