@@ -14,20 +14,18 @@ class GeneticAlgorithm {
   }
 
   run() {
-    for (let k=0; k<20; k++) {
-      let parents = this.select(JSON.parse(JSON.stringify(this.population)), 10);
-      for (let i=0; i<parents.length; i+=2) {
-        let child = this.crossover(parents[i], parents[i+1]);
-        this.mutate(child, 0.05);
-        this.population.push(child);
-        let score = new Evaluation(generateClassesList(this.courses, child)).score();
-        if (score > this.bestScore) {
-          this.best = child;
-          this.bestScore = score;
-        }
+    let parents = this.select(JSON.parse(JSON.stringify(this.population)), 40);
+    for (let i=0; i<parents.length; i+=2) {
+      let child = this.crossover(parents[i], parents[i+1]);
+      this.mutate(child, 0.1);
+      this.population.push(child);
+      let score = new Evaluation(generateClassesList(this.courses, child)).score();
+      if (score > this.bestScore) {
+        this.best = child;
+        this.bestScore = score;
       }
-      this.gen++;
     }
+    this.gen++;
     this.reducePopulation(100);
   }
 
