@@ -32,7 +32,7 @@ class SvgSchedule extends Component {
     let hourLines = [];
     for (let h=startHour; h<=endHour; h++) {
       hourLines.push((
-        <g>
+        <g key={h}>
           <line className="hour-line" x1="0" y1={y(h)} x2={width} y2={y(h)} />
           <text x="0" y={y(h)}>{h}</text>
         </g>
@@ -49,29 +49,36 @@ class SvgSchedule extends Component {
             <rect height="100%" width="100%" style={{fill: 'url(#stripe)'}} />
           </mask>
         </defs>
-        
-        {days.map((day, i) => (
         <g>
-          <text x={xs[day] + 20} y="35" font-size="24">{day}</text>
-          <line x1={xs[day]} y1="0" x2={xs[day]} y2={width} className="day-separator" />
+          {days.map((day, i) => (
+          <g key={day}>
+            <text x={xs[day] + 20} y="35" fontSize="24">{day}</text>
+            <line x1={xs[day]} y1="0" x2={xs[day]} y2={width} className="day-separator" />
+          </g>
+          ))};
         </g>
-        ))};
-        {hourLines}
+        <g>
+          {hourLines}
+        </g>
         <line x1="0" y1={marginTop} x2={width} y2={marginTop} className="main-line" />
         <line x1={marginLeft} y1="0" x2={marginLeft} y2={width} className="main-line" />
 
-        {this.props.classes.map(cl => (
-        <g className={'course-' + courseNums[cl.course]}>
-          <rect className="box" x={xs[cl.day]} y={y(cl.time)} width={dayWidth} height={hourHeight * cl.duration} />
-          <text x={xs[cl.day] + 20} y={y(cl.time) + 20} font-size="20">{cl.course + '/' + cl.type}</text>
+        <g>
+          {this.props.classes.map((cl,i) => (
+          <g className={'course-' + courseNums[cl.course]} key={i}>
+            <rect className="box" x={xs[cl.day]} y={y(cl.time)} width={dayWidth} height={hourHeight * cl.duration} />
+            <text x={xs[cl.day] + 20} y={y(cl.time) + 20} fontSize="20">{cl.course + '/' + cl.type}</text>
+          </g>
+          ))}
         </g>
-        ))}
 
-        {this.props.overlaps.map(ov => (
-        <g className="overlap">
-          <rect className="box" x={xs[ov.day]} y={y(ov.time)} width={dayWidth} height={hourHeight * ov.duration} />
+        <g>
+          {this.props.overlaps.map((ov,i) => (
+          <g className="overlap" key={i}>
+            <rect className="box" x={xs[ov.day]} y={y(ov.time)} width={dayWidth} height={hourHeight * ov.duration} />
+          </g>
+          ))}
         </g>
-        ))}
       </svg>
     );
   }
