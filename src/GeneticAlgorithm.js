@@ -13,9 +13,10 @@ class GeneticAlgorithm {
     this.gen = 0;
   }
 
-  run() {
+  iteration() {
     let n = Math.floor(0.4 * this.population.length);
     let parents = this.select(JSON.parse(JSON.stringify(this.population)), n);
+    let improved = false;
     for (let i=0; i+1<parents.length; i+=2) {
       let child = this.crossover(parents[i], parents[i+1]);
       this.mutate(child, 0.1);
@@ -24,10 +25,22 @@ class GeneticAlgorithm {
       if (score > this.bestScore) {
         this.best = child;
         this.bestScore = score;
+        improved = true;
       }
     }
     this.gen++;
     this.reducePopulation(200);
+    return improved;
+  }
+
+  run() {
+    let i = 0;
+    while(!this.iteration()) {
+      if (++i >= 50) {
+        break;
+      }
+    }
+    console.log(i, 'iterations');
   }
 
   createPopulation(size) {
