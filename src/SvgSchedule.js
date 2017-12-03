@@ -6,7 +6,7 @@ class SvgSchedule extends Component {
     const startHour = 8;
     const endHour = 20;
     const hourHeight = 40;
-    const dayWidth = 150;
+    const dayWidth = 200;
     const days = ['mon', 'tue', 'wed', 'thu', 'fri'];
     const marginTop = 50;
     const marginLeft = 20;
@@ -40,7 +40,7 @@ class SvgSchedule extends Component {
     }
 
     return (
-      <svg width={width} height={height}>
+      <svg viewBox={`0 0 ${width} ${height}`}>
         <defs>
           <pattern id="stripe" patternUnits="userSpaceOnUse" width="4" height="4">
             <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" />
