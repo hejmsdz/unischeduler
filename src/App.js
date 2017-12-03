@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import GroupSelector from './GroupSelector';
-import Schedule from './Schedule';
 import SvgSchedule from './SvgSchedule';
 import Evaluation from './Evaluation';
 import generateClassesList from './funcs';
