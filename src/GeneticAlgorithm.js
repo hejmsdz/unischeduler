@@ -7,15 +7,16 @@ class GeneticAlgorithm {
   }
 
   init() {
-    this.population = this.createPopulation(100);
+    this.population = this.createPopulation(200);
     this.best = null;
     this.bestScore = 0;
     this.gen = 0;
   }
 
   run() {
-    let parents = this.select(JSON.parse(JSON.stringify(this.population)), 40);
-    for (let i=0; i<parents.length; i+=2) {
+    let n = Math.floor(0.4 * this.population.length);
+    let parents = this.select(JSON.parse(JSON.stringify(this.population)), n);
+    for (let i=0; i+1<parents.length; i+=2) {
       let child = this.crossover(parents[i], parents[i+1]);
       this.mutate(child, 0.1);
       this.population.push(child);
@@ -26,7 +27,7 @@ class GeneticAlgorithm {
       }
     }
     this.gen++;
-    this.reducePopulation(100);
+    this.reducePopulation(200);
   }
 
   createPopulation(size) {
@@ -39,7 +40,7 @@ class GeneticAlgorithm {
 
   select(population, size) {
     let scores = population.map(sel => new Evaluation(generateClassesList(this.courses, sel)).score());
-    let sumScores = scores.reduce((a, b) => a+b);
+    let sumScores = scores.reduce((a, b) => a+b, 0);
 
     let selected = [];
     for (let k=0; k<size; k++) {
