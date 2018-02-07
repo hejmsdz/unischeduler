@@ -1,1 +1,425 @@
-{"ipc":[{"TA-2B, TS-2B":[{"group":"TA-2B, TS-2B","day":"thu","time":"10:30 - 12:30","lang":"es"}],"TA-2C, TS-2C":[{"group":"TA-2C, TS-2C","day":"tue","time":"12:30 - 14:30","lang":"es"}],"TA-2D, TS-2D":[{"group":"TA-2D, TS-2D","day":"thu","time":"8:30 - 10:30","lang":"es"}],"TA-2E, TS-2E":[{"group":"TA-2E, TS-2E","day":"fri","time":"11:00 - 13:00","lang":"en"}],"TA-2F, TS-2F":[{"group":"TA-2F, TS-2F","day":"thu","time":"16:00 - 18:00","lang":"es"}],"TA-2G, TS-2G":[{"group":"TA-2G, TS-2G","day":"tue","time":"15:00 - 17:00","lang":"es"}]},{"L1-2B":[{"group":"L1-2B","day":"tue","time":"13:00 - 14:30","lang":"es"}],"L1-2C":[{"group":"L1-2C","day":"wed","time":"15:00 - 16:30","lang":"es"}],"L1-2D":[{"group":"L1-2D","day":"thu","time":"15:00 - 16:30","lang":"es"}],"L1-2E":[{"group":"L1-2E","day":"thu","time":"16:30 - 18:00","lang":"en"}],"L1-2F":[{"group":"L1-2F","day":"mon","time":"16:30 - 18:00","lang":"es"}],"L1-2G":[{"group":"L1-2G","day":"fri","time":"19:00 - 20:30","lang":"es"}],"L2-2B":[{"group":"L2-2B","day":"fri","time":"13:00 - 14:30","lang":"es"}],"L2-2C":[{"group":"L2-2C","day":"tue","time":"9:00 - 10:30","lang":"es"}],"L2-2D":[{"group":"L2-2D","day":"wed","time":"13:00 - 14:30","lang":"es"}],"L2-2F":[{"group":"L2-2F","day":"mon","time":"18:30 - 20:00","lang":"es"}],"L2-2G":[{"group":"L2-2G","day":"wed","time":"15:00 - 16:30","lang":"es"}]}],"csd":[{"TA-2B, TS-2B":[{"group":"TA-2B, TS-2B","day":"tue","time":"11:30 - 13:00","lang":"es"},{"group":"TA-2B, TS-2B","day":"thu","time":"8:30 - 10:00","lang":"es"}],"TA-2C, TS-2C":[{"group":"TA-2C, TS-2C","day":"wed","time":"9:30 - 11:00","lang":"es"},{"group":"TA-2C, TS-2C","day":"fri","time":"11:30 - 13:00","lang":"es"}],"TA-2D, TS-2D":[{"group":"TA-2D, TS-2D","day":"wed","time":"11:30 - 13:00","lang":"es"},{"group":"TA-2D, TS-2D","day":"fri","time":"8:30 - 10:00","lang":"es"}],"TA-2E, TS-2E":[{"group":"TA-2E, TS-2E","day":"thu","time":"11:00 - 12:30","lang":"en"},{"group":"TA-2E, TS-2E","day":"fri","time":"13:00 - 14:30","lang":"en"}],"TA-2F, TS-2F":[{"group":"TA-2F, TS-2F","day":"wed","time":"16:30 - 18:00","lang":"es"},{"group":"TA-2F, TS-2F","day":"fri","time":"17:30 - 19:00","lang":"es"}],"TA-2G, TS-2G":[{"group":"TA-2G, TS-2G","day":"tue","time":"18:30 - 20:00","lang":"es"},{"group":"TA-2G, TS-2G","day":"thu","time":"18:30 - 20:00","lang":"es"}]},{"L1-2B":[{"group":"L1-2B","day":"thu","time":"16:30 - 18:00","lang":"es"}],"L1-2C":[{"group":"L1-2C","day":"tue","time":"9:00 - 10:30","lang":"es"}],"L1-2D":[{"group":"L1-2D","day":"tue","time":"13:00 - 14:30","lang":"es"}],"L1-2E":[{"group":"L1-2E","day":"tue","time":"8:00 - 9:30","lang":"en"}],"L1-2F":[{"group":"L1-2F","day":"mon","time":"18:30 - 20:00","lang":"es"}],"L1-2G":[{"group":"L1-2G","day":"wed","time":"18:30 - 20:00","lang":"es"}],"L2-2B":[{"group":"L2-2B","day":"thu","time":"15:00 - 16:30","lang":"es"}],"L2-2C":[{"group":"L2-2C","day":"wed","time":"8:00 - 9:30","lang":"es"}],"L2-2D":[{"group":"L2-2D","day":"fri","time":"13:00 - 14:30","lang":"es"}],"L2-2F":[{"group":"L2-2F","day":"mon","time":"16:30 - 18:00","lang":"es"}],"L2-2G":[{"group":"L2-2G","day":"mon","time":"15:00 - 16:30","lang":"es"}]}],"top":[{"TA-3CO11, TS-3CO11":[{"group":"TA-3CO11, TS-3CO11","day":"thu","time":"8:00 - 10:00","lang":"es"}],"TA-3CO21, TS-3CO21":[{"group":"TA-3CO21, TS-3CO21","day":"wed","time":"15:00 - 17:00","lang":"es"}]},{"L1-3CO11":[{"group":"L1-3CO11","day":"tue","time":"9:30 - 11:00","lang":"es"}],"L1-3CO21":[{"group":"L1-3CO21","day":"wed","time":"17:30 - 19:00","lang":"es"}]}],"dew":[{"TA-3TI11, TS-3TI11":[{"group":"TA-3TI11, TS-3TI11","day":"tue","time":"12:30 - 14:30","lang":"es"}],"TA-3TI21, TS-3TI21":[{"group":"TA-3TI21, TS-3TI21","day":"mon","time":"15:00 - 17:00","lang":"es"}]},{"L1-3TI11":[{"group":"L1-3TI11","day":"wed","time":"13:00 - 14:30","lang":"es"}],"L1-3TI21":[{"group":"L1-3TI21","day":"mon","time":"17:00 - 18:30","lang":"es"}],"L2-3TI12":[{"group":"L2-3TI12","day":"wed","time":"11:30 - 13:00","lang":"es"}]}],"per":[{"TA-3CO11, TS-3CO11":[{"group":"TA-3CO11, TS-3CO11","day":"fri","time":"11:00 - 13:00","lang":"es"}],"TA-3CO21, TS-3CO21":[{"group":"TA-3CO21, TS-3CO21","day":"thu","time":"15:00 - 17:00","lang":"es"}]},{"L1-3CO11":[{"group":"L1-3CO11","day":"tue","time":"8:00 - 9:30","lang":"es"}],"L1-3CO21":[{"group":"L1-3CO21","day":"tue","time":"17:30 - 19:00","lang":"es"}]}],"bio":[{"TA-1, TS-1":[{"group":"TA-1, TS-1","day":"tue","time":"15:00 - 16:30","lang":"es"},{"group":"TA-1, TS-1","day":"thu","time":"16:30 - 18:00","lang":"es"}]},{"PL-1":[{"group":"PL-1","day":"thu","time":"18:30 - 20:00","lang":"es"}]}]}
+{
+  "ipc": [
+    {
+      "TA-2B, TS-2B": [
+        {
+          "day": "thu",
+          "time": "10:30 - 12:30",
+          "lang": "es"
+        }
+      ],
+      "TA-2C, TS-2C": [
+        {
+          "day": "tue",
+          "time": "12:30 - 14:30",
+          "lang": "es"
+        }
+      ],
+      "TA-2D, TS-2D": [
+        {
+          "day": "thu",
+          "time": "8:30 - 10:30",
+          "lang": "es"
+        }
+      ],
+      "TA-2E, TS-2E": [
+        {
+          "day": "fri",
+          "time": "11:00 - 13:00",
+          "lang": "en"
+        }
+      ],
+      "TA-2F, TS-2F": [
+        {
+          "day": "thu",
+          "time": "16:00 - 18:00",
+          "lang": "es"
+        }
+      ],
+      "TA-2G, TS-2G": [
+        {
+          "day": "tue",
+          "time": "15:00 - 17:00",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "L1-2B": [
+        {
+          "day": "tue",
+          "time": "13:00 - 14:30",
+          "lang": "es"
+        }
+      ],
+      "L1-2C": [
+        {
+          "day": "wed",
+          "time": "15:00 - 16:30",
+          "lang": "es"
+        }
+      ],
+      "L1-2D": [
+        {
+          "day": "thu",
+          "time": "15:00 - 16:30",
+          "lang": "es"
+        }
+      ],
+      "L1-2E": [
+        {
+          "day": "thu",
+          "time": "16:30 - 18:00",
+          "lang": "en"
+        }
+      ],
+      "L1-2F": [
+        {
+          "day": "mon",
+          "time": "16:30 - 18:00",
+          "lang": "es"
+        }
+      ],
+      "L1-2G": [
+        {
+          "day": "fri",
+          "time": "19:00 - 20:30",
+          "lang": "es"
+        }
+      ],
+      "L2-2B": [
+        {
+          "day": "fri",
+          "time": "13:00 - 14:30",
+          "lang": "es"
+        }
+      ],
+      "L2-2C": [
+        {
+          "day": "tue",
+          "time": "9:00 - 10:30",
+          "lang": "es"
+        }
+      ],
+      "L2-2D": [
+        {
+          "day": "wed",
+          "time": "13:00 - 14:30",
+          "lang": "es"
+        }
+      ],
+      "L2-2F": [
+        {
+          "day": "mon",
+          "time": "18:30 - 20:00",
+          "lang": "es"
+        }
+      ],
+      "L2-2G": [
+        {
+          "day": "wed",
+          "time": "15:00 - 16:30",
+          "lang": "es"
+        }
+      ]
+    }
+  ],
+  "csd": [
+    {
+      "TA-2B, TS-2B": [
+        {
+          "day": "tue",
+          "time": "11:30 - 13:00",
+          "lang": "es"
+        },
+        {
+          "day": "thu",
+          "time": "8:30 - 10:00",
+          "lang": "es"
+        }
+      ],
+      "TA-2C, TS-2C": [
+        {
+          "day": "wed",
+          "time": "9:30 - 11:00",
+          "lang": "es"
+        },
+        {
+          "day": "fri",
+          "time": "11:30 - 13:00",
+          "lang": "es"
+        }
+      ],
+      "TA-2D, TS-2D": [
+        {
+          "day": "wed",
+          "time": "11:30 - 13:00",
+          "lang": "es"
+        },
+        {
+          "day": "fri",
+          "time": "8:30 - 10:00",
+          "lang": "es"
+        }
+      ],
+      "TA-2E, TS-2E": [
+        {
+          "day": "thu",
+          "time": "11:00 - 12:30",
+          "lang": "en"
+        },
+        {
+          "day": "fri",
+          "time": "13:00 - 14:30",
+          "lang": "en"
+        }
+      ],
+      "TA-2F, TS-2F": [
+        {
+          "day": "wed",
+          "time": "16:30 - 18:00",
+          "lang": "es"
+        },
+        {
+          "day": "fri",
+          "time": "17:30 - 19:00",
+          "lang": "es"
+        }
+      ],
+      "TA-2G, TS-2G": [
+        {
+          "day": "tue",
+          "time": "18:30 - 20:00",
+          "lang": "es"
+        },
+        {
+          "day": "thu",
+          "time": "18:30 - 20:00",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "L1-2B": [
+        {
+          "day": "thu",
+          "time": "16:30 - 18:00",
+          "lang": "es"
+        }
+      ],
+      "L1-2C": [
+        {
+          "day": "tue",
+          "time": "9:00 - 10:30",
+          "lang": "es"
+        }
+      ],
+      "L1-2D": [
+        {
+          "day": "tue",
+          "time": "13:00 - 14:30",
+          "lang": "es"
+        }
+      ],
+      "L1-2E": [
+        {
+          "day": "tue",
+          "time": "8:00 - 9:30",
+          "lang": "en"
+        }
+      ],
+      "L1-2F": [
+        {
+          "day": "mon",
+          "time": "18:30 - 20:00",
+          "lang": "es"
+        }
+      ],
+      "L1-2G": [
+        {
+          "day": "wed",
+          "time": "18:30 - 20:00",
+          "lang": "es"
+        }
+      ],
+      "L2-2B": [
+        {
+          "day": "thu",
+          "time": "15:00 - 16:30",
+          "lang": "es"
+        }
+      ],
+      "L2-2C": [
+        {
+          "day": "wed",
+          "time": "8:00 - 9:30",
+          "lang": "es"
+        }
+      ],
+      "L2-2D": [
+        {
+          "day": "fri",
+          "time": "13:00 - 14:30",
+          "lang": "es"
+        }
+      ],
+      "L2-2F": [
+        {
+          "day": "mon",
+          "time": "16:30 - 18:00",
+          "lang": "es"
+        }
+      ],
+      "L2-2G": [
+        {
+          "day": "mon",
+          "time": "15:00 - 16:30",
+          "lang": "es"
+        }
+      ]
+    }
+  ],
+  "top": [
+    {
+      "TA-3CO11, TS-3CO11": [
+        {
+          "day": "thu",
+          "time": "8:00 - 10:00",
+          "lang": "es"
+        }
+      ],
+      "TA-3CO21, TS-3CO21": [
+        {
+          "day": "wed",
+          "time": "15:00 - 17:00",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "L1-3CO11": [
+        {
+          "day": "tue",
+          "time": "9:30 - 11:00",
+          "lang": "es"
+        }
+      ],
+      "L1-3CO21": [
+        {
+          "day": "wed",
+          "time": "17:30 - 19:00",
+          "lang": "es"
+        }
+      ]
+    }
+  ],
+  "dew": [
+    {
+      "TA-3TI11, TS-3TI11": [
+        {
+          "day": "tue",
+          "time": "12:30 - 14:30",
+          "lang": "es"
+        }
+      ],
+      "TA-3TI21, TS-3TI21": [
+        {
+          "day": "mon",
+          "time": "15:00 - 17:00",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "L1-3TI11": [
+        {
+          "day": "wed",
+          "time": "13:00 - 14:30",
+          "lang": "es"
+        }
+      ],
+      "L1-3TI21": [
+        {
+          "day": "mon",
+          "time": "17:00 - 18:30",
+          "lang": "es"
+        }
+      ],
+      "L2-3TI12": [
+        {
+          "day": "wed",
+          "time": "11:30 - 13:00",
+          "lang": "es"
+        }
+      ]
+    }
+  ],
+  "per": [
+    {
+      "TA-3CO11, TS-3CO11": [
+        {
+          "day": "fri",
+          "time": "11:00 - 13:00",
+          "lang": "es"
+        }
+      ],
+      "TA-3CO21, TS-3CO21": [
+        {
+          "day": "thu",
+          "time": "15:00 - 17:00",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "L1-3CO11": [
+        {
+          "day": "tue",
+          "time": "8:00 - 9:30",
+          "lang": "es"
+        }
+      ],
+      "L1-3CO21": [
+        {
+          "day": "tue",
+          "time": "17:30 - 19:00",
+          "lang": "es"
+        }
+      ]
+    }
+  ],
+  "cmc": [
+    {
+      "TA-3CO11, TS-3CO11": [
+        {
+          "day": "fri",
+          "time": "8:30 - 10:30",
+          "lang": "es"
+        }
+      ],
+      "TA-3CO21, TS-3CO21": [
+        {
+          "day": "thu",
+          "time": "17:30 - 19:30",
+          "lang": "es"
+        }
+      ]
+    },
+    {
+      "L1-3CO11": [
+        {
+          "day": "wed",
+          "time": "11:00 - 12:30",
+          "lang": "es"
+        }
+      ],
+      "L1-3CO21": [
+        {
+          "day": "wed",
+          "time": "19:00 - 20:30",
+          "lang": "es"
+        }
+      ]
+    }
+  ]
+}
